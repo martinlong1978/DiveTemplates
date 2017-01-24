@@ -292,14 +292,11 @@
 						</div>
 					</div>
 				</div>
-
-		{% if forloop.counter|divisibleby:4 %}
-		</div>
-		{% endif %}
-	{% endfor %}
-{% endblock %}
-<div id="footer">
-</div>
-</div>
-</body>
-</html>
+				{% if forloop.counter|divisibleby:4 %}
+			</div>
+			{% endif %}
+		{% endfor %}
+	{% endblock %}
+	</div>
+	</body>
+	</html>
