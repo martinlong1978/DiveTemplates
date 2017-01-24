@@ -118,11 +118,11 @@
 		}
 	</style>
 </head>
-<body data-numberofdives = 6>
+<body data-numberofdives = 4>
 <div id="body_div">
 {% block main_rows %}
 	{% for dive in dives %}
-		{% if forloop.counter|divisibleby:6 %}
+		{% if forloop.counter|divisibleby:4 %}
 		<div id = "sixdivespack">
 		{% endif %}
 		<div class="mainContainer">
@@ -181,7 +181,7 @@
 				</div>
 			</div>
 		</div>
-		{% if forloop.counter|divisibleby:6 %}
+		{% if forloop.counter|divisibleby:4 %}
 		</div>
 		{% endif %}
 	{% endfor %}
