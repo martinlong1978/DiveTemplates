@@ -59,12 +59,7 @@ td {
 	overflow: hidden;
 }
 
-.diveDetails {
-	page-break-inside: avoid;
-	width: 100%;
-	height: 98%;
-	float: left;
-}
+
 
 .diveProfile {
 	page-break-inside: avoid;
@@ -73,6 +68,13 @@ td {
 	margin: 0.5%;
 	float: left;
 	background-color: grey;
+}
+
+.diveDetails {
+	page-break-inside: avoid;
+	width: 100%;
+	height: 98%;
+	float: left;
 }
 
 .dataSection {
@@ -126,8 +128,8 @@ td {
 </head>
 <body data-numberofdives = 4>
 	<div id="body_div">
-		<!--{% block main_rows %}
-		{% for dive in dives %}-->
+		{% block main_rows %}
+		{% for dive in dives %}
 		{% if forloop.counter|divisibleby:4 %}
 		<div id="fourdivespack" class="dontbreak">
 			{% endif %}
@@ -291,8 +293,8 @@ td {
 				{% if forloop.counter|divisibleby:4 %}
 			</div>
 			{% endif %}
-			<!--{% endfor %}
-			{% endblock %}-->
-		</div>
+		{% endfor %}
+	{% endblock %}
+	</div>
 	</body>
 	</html>
