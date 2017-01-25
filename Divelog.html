@@ -36,8 +36,13 @@ td {
 	float: left;
 }
 
+.separator {
+	width: 6%;
+	height: 50%;
+}
+
 .mainContainer {
-	width: 43%;
+	width: 40%;
 	height: 50%;
 	margin-left: 6%;
 	margin-right: 0%;
@@ -128,7 +133,11 @@ td {
 		{% if forloop.counter|divisibleby:4 %}
 		<div id = "fourdivespack">
 			{% endif %}
-			<div class="mainContainer dontbreak">
+			{% if forloop.counter0|divisibleby:2 %}
+			<div id = "separator">
+			</div>
+			{% endif %}
+				<div class="mainContainer dontbreak">
 				<div class="innerContainer">
 					<div class="diveDetails">
 						<div class="diveProfile" id="dive_{{ dive.id }}">
